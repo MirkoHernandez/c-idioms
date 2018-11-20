@@ -11,8 +11,7 @@
 
 ** Check for first argument pattern.
 #+BEGIN_SRC C
-if (argc > 1 && argv[1][0] == '-' && argv[1][1] ==  'n') {
-        
+if (argc > 1 && argv[1][0] == '-' && argv[1][1] ==  'n') {        
 }
 
 #+END_SRC
@@ -23,24 +22,23 @@ As seen in the original K&R, by convention optional arguments start with a minus
 while(--argc > 0 && (*++argv)[0] == '-') {
         // Process optional arguments
 }
-
 #+END_SRC
 
 ** Processing  arguments using /while/.
-
  #+BEGIN_SRC C
  while(*argv) {
+        // Do something
         if (*++argv)
          // Do something, considering there are more arguments to be processed.
  }
  #+END_SRC
 
 ** Processing arguments using /for/.
-
 #+BEGIN_SRC C
 
-
-
+for(int i = 1; i < argc; i++) {
+        // Do something using argv[i]
+}
 
 #+END_SRC
 
