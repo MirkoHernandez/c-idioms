@@ -1,0 +1,25 @@
+#+OPTIONS: toc:nil
+
+* Command-Line Arguments
+
+** Check for first argument.
+
+#+BEGIN_SRC C
+ if (*++argv && !strcmp(*argv, "-n")) {
+         ++argv;
+         // Do something,  usually set a flag.
+ }
+ #+END_SRC
+
+** Processing  arguments using /while/.
+
+ #+BEGIN_SRC C
+ while(*argv) {
+        if (*++argv)
+         // Do something. 
+ }
+ #+END_SRC
+
+
+
+
