@@ -14,8 +14,7 @@ if (*++argv && !strcmp(*argv, "-n")) {
 ## Check for first argument pattern.
 
 ```C
-if (argc > 1 && argv[1][0] == '-' && argv[1][1] ==  'n') {
-
+if (argc > 1 && argv[1][0] == '-' && argv[1][1] ==  'n') {        
 }
 
 ```
@@ -23,13 +22,12 @@ if (argc > 1 && argv[1][0] == '-' && argv[1][1] ==  'n') {
 
 ## Process optional arguments first
 
-As seen in the original K&R, optional arguments start with a minus sign.
+As seen in the original K&R, by convention optional arguments start with a minus sign.
 
 ```C
 while(--argc > 0 && (*++argv)[0] == '-') {
 	// Process optional arguments
 }
-
 ```
 
 
@@ -37,6 +35,7 @@ while(--argc > 0 && (*++argv)[0] == '-') {
 
 ```C
 while(*argv) {
+       // Do something
        if (*++argv)
 	// Do something, considering there are more arguments to be processed.
 }
@@ -47,7 +46,8 @@ while(*argv) {
 
 ```C
 
-
-
+for(int i = 1; i < argc; i++) {
+	// Do something using argv[i]
+}
 
 ```
