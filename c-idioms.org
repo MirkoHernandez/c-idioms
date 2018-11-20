@@ -18,7 +18,7 @@ if (argc > 1 && argv[1][0] == '-' && argv[1][1] ==  'n') {
 #+END_SRC
 
 ** Process optional arguments first
-As seen in the original K&R, optional arguments start with a minus sign. 
+As seen in the original K&R, by convention optional arguments start with a minus sign. 
 #+BEGIN_SRC C
 while(--argc > 0 && (*++argv)[0] == '-') {
         // Process optional arguments
