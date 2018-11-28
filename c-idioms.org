@@ -42,5 +42,21 @@ for(int i = 1; i < argc; i++) {
 
 #+END_SRC
 
+** Processing option arguments using getopt
+Arguments are processed using while and switch. 
+Most of the time argc and argv are the same arguments received by main.
+optarg is the variable set to to the /value/ of the  option argument.
+optind is the variable set to the /index/ of next non-option argument.
 
-
+#+BEGIN_SRC C
+while ((c = getopt (argc, argv, "f: :c")) != -1) { // Process option arguments
+	switch (c) {
+	case 't':
+                foo(optarg)  // Do something, optarg is the value of the option.
+		break;
+	default:
+	}
+}
+argc -= optind;   // update list of arguments so that regular arguments (non-option) can be processed as usual.
+argv += optind;
+#+END_SRC
