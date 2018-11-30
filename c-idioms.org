@@ -24,7 +24,7 @@ while(--argc > 0 && (*++argv)[0] == '-') {
 }
 #+END_SRC
 
-** Processing  arguments using /while/.
+** Processing arguments using /while/.
  #+BEGIN_SRC C
  while(*argv) {
         // Do something
