@@ -101,10 +101,10 @@ for performance.
 * Bit manipulation
 
 ** Arithmetic
-left shift by n is equivalent to a division by 2^n.
-right shift by n is equivalent to a multiplication by 2^n.
-bitwise and by n is equivalent to a modulus operation by 2^n + 1, so the
-right operand should be /odd/.
+- left shift by n is equivalent to a division by 2en.
+- right shift by n is equivalent to a multiplication by 2en.
+- bitwise and by n is equivalent to a modulus operation by 2en + 1, so
+  the right operand must be /odd/.
 
 #+NAME
 #+BEGIN_SRC C
