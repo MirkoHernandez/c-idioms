@@ -114,7 +114,9 @@ int some_function(int n)
 
 ## Arithmetic
 
-left shift by n is equivalent to a division by 2<sup>n</sup>. right shift by n is equivalent to a multiplication by 2<sup>n</sup>. bitwise and by n is equivalent to a modulus operation by 2<sup>n</sup> + 1, so the right operand should be *odd*.
+-   left shift by n is equivalent to a division by 2en.
+-   right shift by n is equivalent to a multiplication by 2en.
+-   bitwise and by n is equivalent to a modulus operation by 2en + 1, so the right operand must be *odd*.
 
 \#+NAME
 
