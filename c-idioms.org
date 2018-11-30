@@ -106,7 +106,6 @@ for performance.
 - bitwise and by n is equivalent to a modulus operation by 2en + 1, so
   the right operand must be /odd/.
 
-#+NAME
 #+BEGIN_SRC C
 
 // Multiplication
