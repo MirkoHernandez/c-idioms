@@ -115,12 +115,12 @@ for performance.
 
     
     // Multiplication
-    3 << 2; // divide by 4
-    3 << 4  // divide by 16
+    3 << 2; // multiply by 4
+    3 << 4;  // multiply by 16
     
     // Division
-    3 >> 2; // multiply by 16
-    3 >> 4;  // multiply by 16
+    3 >> 2; // divide by 4
+    3 >> 4;  // divide by 16
     
     // Modulus
     19 & 3;    // equal to  19 % 4 
@@ -137,8 +137,9 @@ for performance.
     
     if (*c == 0x12) // check first byte
     	// big endian
+    	// else little endian
     
-    // A simpler version
+    // A more concise idiom
     int n = 1;
-    if(*(char *)&n == 1)
+    if (*(char *)&n == 1)
 
