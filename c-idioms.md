@@ -58,7 +58,8 @@ optind is the variable set to the *index* of next non-option argument.
     	default:
     	}
     }
-    argc -= optind;   // update list of arguments so that regular arguments (non-option) can be processed as usual.
+    argc -= optind;   // update   list  of   arguments  so   that  regular
+    		  // arguments (non-option) can be processed as usual.
     argv += optind;
 
 
@@ -92,11 +93,14 @@ for performance.
     	if ()
     		goto message;
     	for() {
-    		for () { // Nested for to indicate the usefulness of the idiom (a break statement won't do here).
+    		for () { // Nested for  to indicate the  usefulness of
+    			 // the  idiom  (a  break statement  won't  do
+    			 // here).
     			goto message;
     		}
     	}
-    	// Handle common exit condition. Ideally the label should be the name of the operation.
+    	// Handle common  exit condition. Ideally the  label should be
+    	// the name of the operation.
     	:message
     		 // print something
     		 return -1;
@@ -116,14 +120,14 @@ for performance.
     
     // Multiplication
     3 << 2; // multiply by 4
-    3 << 4;  // multiply by 16
+    3 << 4; // multiply by 16
     
     // Division
     3 >> 2; // divide by 4
-    3 >> 4;  // divide by 16
+    3 >> 4; // divide by 16
     
-    // Modulus
-    19 & 3;    // equal to  19 % 4 
+    // Modulus - & 3 is equivalento to mod 3 + 1
+    19 & 3; // equal to  19 % 4 
 
 
 ## Check endianness
