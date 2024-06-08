@@ -69,6 +69,7 @@ optind is the variable set to the /index/ of next non-option argument.
 
 * Control Flow
 ** Nested ternary operator in order to chose an alternative.
+
 In  this  idiom the  consequent  and  alternative expressions  of  the
 ternary  operator   can  be   ternary  expressions   themselves.   The
 conditions must be mutually exclusive and the final expression must be
@@ -113,9 +114,9 @@ for performance.
 
 ** Arithmetic
 
-- left shift by n is equivalent to a division by 2en.
-- right shift by n is equivalent to a multiplication by 2en.
-- bitwise and by n is equivalent to a modulus operation by 2en + 1, so
+- left shift by n is equivalent to a division by 2^n.
+- right shift by n is equivalent to a multiplication by 2^n.
+- bitwise and by n is equivalent to a modulus operation by 2^n + 1, so
   the right operand must be /odd/.
 
 #+BEGIN_SRC C
@@ -165,13 +166,13 @@ Check if some bit is set for a particular variable.
 bool checked = ((some_var & (1 << 30)) != 0);
 #+END_SRC
 
-Use & to clamp a value to be of particular maximum number of bits.
+Use & to clamp a value to be of a particular maximum number of bits.
 
 #+BEGIN_SRC C
-u64 some_var = (u64)(other_var & 0x00000003)
+u64 some_var = (u64)(other_var & 0x00000003);
 #+END_SRC
 
-Build a bit pattern using |.
+Build a bit pattern using the | operator.
 
 #+BEGIN_SRC C
 uint32 color = ((uint8) (r * 255.0f)) << 16 |
