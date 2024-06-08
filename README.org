@@ -1,6 +1,11 @@
 #+OPTIONS: toc:nil
+* A collection of idioms in C.
+
+As the title indicates this is a collection of C idioms, roughly
+categorized.
 
 * Command-Line Arguments
+
 ** Check for first argument using /strcmp/.
 #+BEGIN_SRC C
  if (*++argv && !strcmp(*argv, "-n")) {
@@ -76,11 +81,13 @@ different for each case.
 #+END_SRC
 
 ** goto expression as function termination.
-A goto expression  is used to execute code required  in multiple parts
-of the  function.  This  idiom presumes  multiple exit  conditions and
-that the label should always be before the end of the function.
-Convenient for  code reuse if preventing a function call  is required
+
+A goto expression is used to execute code required in multiple parts
+of the function. This idiom presupposes multiple exit conditions and
+that the label should always be placed before the end of the function.
+Convenient for code reuse if preventing a function call is required
 for performance.
+
 #+BEGIN_SRC C
   int some_function(int n) 
   {
@@ -105,6 +112,7 @@ for performance.
 * Bit manipulation
 
 ** Arithmetic
+
 - left shift by n is equivalent to a division by 2en.
 - right shift by n is equivalent to a multiplication by 2en.
 - bitwise and by n is equivalent to a modulus operation by 2en + 1, so
@@ -132,8 +140,8 @@ for performance.
 
 
 ** Check endianness
-#+BEGIN_SRC C
 
+#+BEGIN_SRC C
    unsigned int x;
    char *c;
 
@@ -147,6 +155,26 @@ for performance.
   // A more concise idiom
   int n = 1;
   if (*(char *)&n == 1)
+#+END_SRC
 
+** Checking and Setting bits.
 
+Check if some bit is set for a particular variable.
+
+#+BEGIN_SRC C
+bool checked = ((some_var & (1 << 30)) != 0);
+#+END_SRC
+
+Use & to clamp a value to be of particular maximum number of bits.
+
+#+BEGIN_SRC C
+u64 some_var = (u64)(other_var & 0x00000003)
+#+END_SRC
+
+Build a bit pattern using |.
+
+#+BEGIN_SRC C
+uint32 color = ((uint8) (r * 255.0f)) << 16 |
+	     ((uint8) (g* 255.0f)) << 8) |
+	     ((uint8) (b * 255.0f) << 0));
 #+END_SRC
